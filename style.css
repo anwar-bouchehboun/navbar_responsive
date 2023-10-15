@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+header {
+    background-color: #262626;
+}
+nav ul li {
+    list-style: none;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.navbar{
+    min-height:70px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+
+}
+.nav-logo{
+font-size: 2rem;
+}
+.nav-logo b{
+    color: rgb(232, 178, 17);;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    /* background-color: #fff; */
+}
+nav ul li a {
+    transition:  0.7s ease-in-out;
+    padding: 8px 16px; 
+}
+
+nav ul li a:hover {
+    color: #eab412; 
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition:all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:rgb(232, 178, 17);
+}
+
+.hero{
+    background-image: url(soli.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+.back {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    background-color: #a19a9a;
+    opacity: 0.4;
+}
+.container{
+    width: 44%;
+    margin-left: 40px;
+    padding: 160px 0;
+    color: #161313;
+    line-height: 32px;
+
+}
+.container b{
+    color: tan;
+}
+h2{
+    padding-bottom: 22px
+}
+em{
+    color: rgb(189, 159, 23);
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+}
+p{
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #edeae8;
+}
+button{
+    margin-top: 10px;
+    padding: 10px 50px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: #eab412;
+}
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+     transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 10000;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+   
+    .container {
+        width: 88%;
+        /* padding-left: 0px; */
+        margin: auto;
+        text-align: center;
+        
+       
+    }
+  
+}
+    
